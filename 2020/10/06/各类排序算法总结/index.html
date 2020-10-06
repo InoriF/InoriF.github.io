@@ -6,15 +6,37 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>InoriF</title>
+  <title>各类排序算法总结 | InoriF</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="InoriF">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="内部排序算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="各类排序算法总结">
+<meta property="og:url" content="http://example.com/2020/10/06/%E5%90%84%E7%B1%BB%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/index.html">
 <meta property="og:site_name" content="InoriF">
+<meta property="og:description" content="内部排序算法">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/06/0tO18U.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/06/0tOIxg.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/06/0tXvTI.gif">
+<meta property="og:image" content="https://i.loli.net/2020/10/06/kVWHyRhv5t8MAUw.gif">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/06/0NE6sI.gif">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/06/0NIM7T.png">
+<meta property="og:image" content="https://i.loli.net/2020/10/06/rXntVhymxzDvk8J.gif">
+<meta property="og:image" content="https://images2017.cnblogs.com/blog/849589/201710/849589-20171015230557043-37375010.gif">
+<meta property="og:image" content="https://i.loli.net/2020/10/06/dSZhvr94tAf1a5N.png">
+<meta property="og:image" content="https://i.loli.net/2020/10/06/rlwMjJWACnT4VfX.png">
+<meta property="og:image" content="https://i.loli.net/2020/10/06/BNi7POCyTmZfhkW.png">
+<meta property="og:image" content="https://i.loli.net/2020/10/06/aVtcDdWGzEZmspe.png">
+<meta property="og:image" content="https://i.loli.net/2020/10/06/LA4yKghPSzRU8xm.png">
+<meta property="og:image" content="https://i.loli.net/2020/10/06/C4VUASM1ZJ2Pyav.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/06/0UP7RA.png">
+<meta property="og:image" content="https://i.loli.net/2020/10/06/5H3ftKxTzpUqPVR.png">
+<meta property="og:image" content="https://i.loli.net/2020/10/06/YBosiwJQknauK31.png">
+<meta property="article:published_time" content="2020-10-06T01:29:49.000Z">
+<meta property="article:modified_time" content="2020-10-06T10:31:16.780Z">
 <meta property="article:author" content="InoriF">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/10/06/0tO18U.png">
   
     <link rel="alternative" href="/atom.xml" title="InoriF" type="application/atom+xml">
   
@@ -148,16 +170,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-各类排序算法总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-各类排序算法总结" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/06/%E5%90%84%E7%B1%BB%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/">各类排序算法总结</a>
+    <h1 class="article-title" itemprop="name">
+      各类排序算法总结
     </h1>
   
 
@@ -170,8 +190,256 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="内部排序算法"><a href="#内部排序算法" class="headerlink" title="内部排序算法"></a>内部排序算法</h1>
-        
+        <h1 id="内部排序算法"><a href="#内部排序算法" class="headerlink" title="内部排序算法"></a>内部排序算法</h1><a id="more"></a>
+
+<h1 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h1><ul>
+<li>插入排序类似于用扑克牌的排序，当手上已有排好的2、4、5、10时，如果此时摸到一张7，那么应当将这张牌直接插入到5、10之间，如图所示</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/10/06/0tO18U.png" alt="0tO18U.png"></p>
+<ul>
+<li>插入排序在执行过程中，序列是被分为两部分的，前半部分是已经排好序的有序序列，后半部分是待排序的乱序序列</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/10/06/0tOIxg.png" alt="0tOIxg.png"></p>
+<blockquote>
+<p>所以插入排序的过程就是  </p>
+<ol>
+<li>从头开始扫描序列，直到扫描到一个还未被排序的新元素</li>
+<li>将这个新元素插入到头部有序序列的适当位置</li>
+<li>直到整个序列被扫描完，排序结束</li>
+</ol>
+</blockquote>
+<p><img src="https://s1.ax1x.com/2020/10/06/0tXvTI.gif" alt="0tXvTI.gif"></p>
+<ul>
+<li><p>“插入”</p>
+<ul>
+<li>事实上插入新元素时，所采取的手段一般是将新元素与前方相邻的元素依次比大小，如果新元素较小则交换两个元素位置，直到前方相邻元素更小为止（类似于冒泡排序），所以实际操作中名为“插入”的操作实际上是相邻元素不停对换的过程</li>
+</ul>
+</li>
+<li><p>逆序对</p>
+<ul>
+<li>对于一个包含N个非负整数的数组A[1..n]，如果有i &lt; j，且A[ i ]&gt;A[ j ]，则称(A[ i] ,A[ j] )为数组A中的一个逆序对。例如，数组（3，1，4，5，2）的逆序对有(3,1),(3,2),(4,2),(5,2)，共4个。</li>
+<li>对于插入排序来说，其时间复杂度自然取决于过程中相邻元素对换的次数，次数越多，时间复杂度越高</li>
+</ul>
+</li>
+</ul>
+<h2 id="稳定性"><a href="#稳定性" class="headerlink" title="稳定性"></a>稳定性</h2><p>由于插入排序中只存在相邻元素的位置交换，考虑两相等元素A1、A2（A1在A2前方，下同），当插入排序扫描到A2时，A1已经进入了排好的有序序列，执行到A2与A1的大小比较，只要将代码语句设置为“比前方元素更小才发生交换”，A1与A2便不会发生交换，保证了插入排序算法的稳定性。</p>
+<ul>
+<li>但是如果交换条件设置为小于等于，那么算法便失去稳定性</li>
+</ul>
+<h2 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h2><h3 id="最优情况"><a href="#最优情况" class="headerlink" title="最优情况"></a>最优情况</h3><p>由逆序对的分析可知，当序列本身完全有序，发生的元素交换次数为0，算法只需要扫描一遍序列中所有元素即可，时间复杂度为O(n)</p>
+<h3 id="最差情况"><a href="#最差情况" class="headerlink" title="最差情况"></a>最差情况</h3><p>同理，当序列完全逆序，逆序对的个数最多，共需要(n-1)+(n-2)+……+2+1次元素交换，此为n^2级，故最差情况时间复杂度为O(n^2)</p>
+<h3 id="平均情况"><a href="#平均情况" class="headerlink" title="平均情况"></a>平均情况</h3><p>对于长度为n的随机序列，逆序对的平均数目为(n/2)+……+1级别，此亦为n^2级，故平均时间复杂度为O(n^2)</p>
+<h2 id="空间复杂度"><a href="#空间复杂度" class="headerlink" title="空间复杂度"></a>空间复杂度</h2><p>由于插入排序最多只需要用到在元素交换时存一个元素的辅助空间，所以空间复杂度为O(1)<br><br/></p>
+<h2 id="小总结"><a href="#小总结" class="headerlink" title="小总结"></a>小总结</h2><h2 id="直接插入排序"><a href="#直接插入排序" class="headerlink" title="直接插入排序"></a>直接插入排序</h2><table>
+<thead>
+<tr>
+<th align="center">稳定性</th>
+<th align="center">最优时间复杂度</th>
+<th align="center">平均时间复杂度</th>
+<th align="center">最差时间复杂度</th>
+<th align="center">空间复杂度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">稳定</td>
+<td align="center">O(n)</td>
+<td align="center">O(n^2)</td>
+<td align="center">O(n^2)</td>
+<td align="center">O(1)</td>
+</tr>
+</tbody></table>
+<p><br/><br/><br/></p>
+<h1 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h1><p>选择排序十分简单粗暴，其根本原理就是每次都选极值元素加入有序队列</p>
+<blockquote>
+<p>选择排序的过程 </p>
+<ol>
+<li>从头开始扫描序列，找出序列中最小的元素，将其与序列最前端的元素互换位置</li>
+<li>此时第一个元素已经是整个序列中最小的，第二次扫描开始，忽略刚才已经排好的元素，然后第三、四……次同理</li>
+<li>直到整个序列被扫描完，排序结束</li>
+</ol>
+</blockquote>
+<p><img src="https://i.loli.net/2020/10/06/kVWHyRhv5t8MAUw.gif" alt="849589-20171015224719590-1433219824.gif"></p>
+<h2 id="稳定性-1"><a href="#稳定性-1" class="headerlink" title="稳定性"></a>稳定性</h2><p>由于选择排序中存在不相邻元素的位置交换，考虑两相等元素A1、A2，假设有一序列如下</p>
+<blockquote>
+<p>10A 5 10B 2 8 7 6<br>显然扫描一遍找到最小元素2,将其与10A交换<br>2 5 10B 10A 8 7 6<br>如例所示，10A与10B相对位置发生了改变，所以选择排序不稳定</p>
+</blockquote>
+<h2 id="时间复杂度-1"><a href="#时间复杂度-1" class="headerlink" title="时间复杂度"></a>时间复杂度</h2><h3 id="最优情况-amp-最差情况-amp-平均情况"><a href="#最优情况-amp-最差情况-amp-平均情况" class="headerlink" title="最优情况&amp;最差情况&amp;平均情况"></a>最优情况&amp;最差情况&amp;平均情况</h3><p>由于选择排序不管序列本身怎样，每一轮扫描都要扫描整个序列以找出最小元素，所以时间复杂度没有最优最差平均之分，均为O(n^2)</p>
+<h2 id="空间复杂度-1"><a href="#空间复杂度-1" class="headerlink" title="空间复杂度"></a>空间复杂度</h2><p>由于选择排序最多只需要用到在元素交换时存一个元素的辅助空间，所以空间复杂度为O(1)</p>
+<br/>
+
+<h2 id="小总结-1"><a href="#小总结-1" class="headerlink" title="小总结"></a>小总结</h2><h2 id="选择排序-1"><a href="#选择排序-1" class="headerlink" title="选择排序"></a>选择排序</h2><table>
+<thead>
+<tr>
+<th align="center">稳定性</th>
+<th align="center">最优时间复杂度</th>
+<th align="center">平均时间复杂度</th>
+<th align="center">最差时间复杂度</th>
+<th align="center">空间复杂度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">不稳定</td>
+<td align="center">O(n^2)</td>
+<td align="center">O(n^2)</td>
+<td align="center">O(n^2)</td>
+<td align="center">O(1)</td>
+</tr>
+</tbody></table>
+<p><br/><br/><br/></p>
+<h1 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h1><p>最经典的排序算法，它重复地走访过要排序的数列，一次比较两个元素，如果它们的顺序错误就把它们交换过来。这个算法的名字由来是因为越小的元素会经由交换慢慢“浮”到数列的顶端。</p>
+<blockquote>
+<p>冒泡排序的过程   </p>
+<ol>
+<li>比较相邻的元素。如果第一个比第二个大，就交换它们两个；  </li>
+<li>对每一对相邻元素作同样的工作，从开始第一对到结尾的最后一对，这样在最后的元素应该会是最大的数；  </li>
+<li>针对所有的元素重复以上的步骤，除了最后一个；  </li>
+<li>重复步骤1~3，直到排序完成。  </li>
+</ol>
+</blockquote>
+<p><img src="https://s1.ax1x.com/2020/10/06/0NE6sI.gif" alt="0NE6sI.gif"></p>
+<h2 id="稳定性-2"><a href="#稳定性-2" class="headerlink" title="稳定性"></a>稳定性</h2><p>由于冒泡排序中不存在不相邻元素的位置交换，考虑两相等元素A1、A2，由于我们只在A1＞A2时交换二者，所以只要保证这一条件，二者的相对位置不会改变，保证了冒泡排序的稳定性。</p>
+<ul>
+<li>但是如果交换条件设置为大于等于，那么算法便失去稳定性</li>
+</ul>
+<h2 id="时间复杂度-2"><a href="#时间复杂度-2" class="headerlink" title="时间复杂度"></a>时间复杂度</h2><h3 id="最优情况-1"><a href="#最优情况-1" class="headerlink" title="最优情况"></a>最优情况</h3><p>实际上冒泡排序的最优时间复杂度有争论，按照最基本的冒泡排序算法，即使是已经排好序的有序序列，冒泡排序也要经过n轮遍历才能结束，复杂度为n^2级，但是一般来说认为最优时间复杂度为O(n)，条件是对冒泡排序算法本身进行一定优化，添加一个局部有序标志，即每次遍历后记录发生最后一次交换的位置，那么下一次遍历就只用进行到这一位置了，所以当序列完全有序，只用进行一次遍历便可退出，时间复杂度O(n)</p>
+<h3 id="最差情况-1"><a href="#最差情况-1" class="headerlink" title="最差情况"></a>最差情况</h3><p>完全逆序时，同插入排序，需要交换(n-1)+(n-2)+……+2+1次，此为n^2级，故最差情况时间复杂度为O(n^2)</p>
+<h3 id="平均情况-1"><a href="#平均情况-1" class="headerlink" title="平均情况"></a>平均情况</h3><p>对于长度为n的随机序列，逆序对的平均数目为(n/2)+……+1级别，此亦为n^2级，故平均时间复杂度为O(n^2)</p>
+<h2 id="空间复杂度-2"><a href="#空间复杂度-2" class="headerlink" title="空间复杂度"></a>空间复杂度</h2><p>由于冒泡排序最多只需要用到在元素交换时存一个元素的辅助空间，所以空间复杂度为O(1)<br><br/></p>
+<h2 id="小总结-2"><a href="#小总结-2" class="headerlink" title="小总结"></a>小总结</h2><h2 id="冒泡排序-1"><a href="#冒泡排序-1" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><table>
+<thead>
+<tr>
+<th align="center">稳定性</th>
+<th align="center">最优时间复杂度</th>
+<th align="center">平均时间复杂度</th>
+<th align="center">最差时间复杂度</th>
+<th align="center">空间复杂度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">稳定</td>
+<td align="center">O(n)</td>
+<td align="center">O(n^2)</td>
+<td align="center">O(n^2)</td>
+<td align="center">O(1)</td>
+</tr>
+</tbody></table>
+<p><br/><br/><br/></p>
+<h1 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h1><p>希尔排序实际上是一种优化后的插入排序，是历史上第一个突破O(n^2)的排序算法。其本质是将数据依次分组，然后在组内的元素中进行简单插入排序，一次分组拍好后再下一次分组，每一次分组越来越少，直到最后分为一组（所有数据）排序后结束。</p>
+<ul>
+<li>增量序列<ul>
+<li>增量序列指的是每次分组排序过程将数据分为多少组，如增量序列{1,2,5}就是指将序列依次分为5、2、1组，如图（分为五组的时候第一组会多一个元素，芜锁胃）<br><img src="https://s1.ax1x.com/2020/10/06/0NIM7T.png" alt="0NIM7T.png"></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>希尔排序的过程   </p>
+<ol>
+<li>选择一个增量序列t1，t2，…，tk，其中ti&gt;tj</li>
+<li>按增量序列个数k，对序列进行k 趟排序；</li>
+<li>每趟排序，根据对应的增量ti，将待排序列分割成若干长度为m 的子序列，分别对各子表进行直接插入排序。仅增量因子为1 时，整个序列作为一个表来处理，表长度即为整个序列的长度。</li>
+</ol>
+</blockquote>
+<p><img src="https://i.loli.net/2020/10/06/rXntVhymxzDvk8J.gif" alt="849589-20180331170017421-364506073.gif"></p>
+<h2 id="稳定性-3"><a href="#稳定性-3" class="headerlink" title="稳定性"></a>稳定性</h2><p>由于希尔排序中存在不相邻元素的位置交换，考虑两相等元素A1、A2，在分组之后插入排序的元素交换完全有可能对调A1、A2元素的位置，所以希尔排序不稳定。</p>
+<h2 id="时间复杂度-3"><a href="#时间复杂度-3" class="headerlink" title="时间复杂度"></a>时间复杂度</h2><h3 id="最优情况-2"><a href="#最优情况-2" class="headerlink" title="最优情况"></a>最优情况</h3><p>最优情况即原有序列已经有序，那么只需要按增量序列进行分组，每次分组后不需要任何操作，由于增量序列最大项也不会超过n，所以时间复杂度为O(n)</p>
+<h3 id="平均情况-2"><a href="#平均情况-2" class="headerlink" title="平均情况"></a>平均情况</h3><p>取决于增量序列，会发生变化</p>
+<h3 id="最差情况-2"><a href="#最差情况-2" class="headerlink" title="最差情况"></a>最差情况</h3><p>希尔排序最差情况的时间复杂度与增量序列的选择有关，希尔本人给出的序列最差情况下时间复杂度为O(n^2)，而后人经过研究得到的最优增量序列在最差情况下的时间复杂度为O[n^(4/3)]，所以最差情况时间复杂度为O[n^(4/3)]~O(n^2)</p>
+<h2 id="空间复杂度-3"><a href="#空间复杂度-3" class="headerlink" title="空间复杂度"></a>空间复杂度</h2><p>希尔排序最多只需要用到在元素交换时存一个元素的辅助空间，所以空间复杂度为O(1)</p>
+<br/>
+
+<h2 id="小总结-3"><a href="#小总结-3" class="headerlink" title="小总结"></a>小总结</h2><h2 id="希尔排序-1"><a href="#希尔排序-1" class="headerlink" title="希尔排序"></a>希尔排序</h2><table>
+<thead>
+<tr>
+<th align="center">稳定性</th>
+<th align="center">最优时间复杂度</th>
+<th align="center">平均时间复杂度</th>
+<th align="center">最差时间复杂度</th>
+<th align="center">空间复杂度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">不稳定</td>
+<td align="center">O(n)</td>
+<td align="center">看情况</td>
+<td align="center">O[n^(4/3)]~O(n^2)</td>
+<td align="center">O(1)</td>
+</tr>
+</tbody></table>
+<p><br/><br/><br/></p>
+<h1 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h1><p>极其经典的一种排序算法，是分治法的经典应用。将已有序的子序列合并，得到完全有序的序列；即先使每个子序列有序，再使子序列段间有序。若将两个有序表合并成一个有序表，称为2-路归并。</p>
+<blockquote>
+<p>归并排序的过程</p>
+<ol>
+<li>把长度为n的输入序列分成两个长度为n/2的子序列；</li>
+<li>对这两个子序列分别采用归并排序(递归调用直到每个字序列长度为1)</li>
+<li>将两个排序好的子序列合并成一个最终的排序序列。</li>
+</ol>
+</blockquote>
+<p><img src="https://images2017.cnblogs.com/blog/849589/201710/849589-20171015230557043-37375010.gif" alt="0NE6s3.gif"></p>
+<p>Mergesort在执行过程中有两个阶段，先devide，再merge，如图<br><img src="https://i.loli.net/2020/10/06/dSZhvr94tAf1a5N.png" alt="QQ图片20201006171302.png"></p>
+<h2 id="稳定性-4"><a href="#稳定性-4" class="headerlink" title="稳定性"></a>稳定性</h2><p>归并排序中，分组后并不存在不相邻元素交换的情况，而在merge操作时，可以在相等的情况下优先取左（前）侧的元素，所以归并排序是稳定的</p>
+<h2 id="时间复杂度-4"><a href="#时间复杂度-4" class="headerlink" title="时间复杂度"></a>时间复杂度</h2><h3 id="最优情况-amp-amp-最优情况-amp-最差情况-amp-平均情况"><a href="#最优情况-amp-amp-最优情况-amp-最差情况-amp-平均情况" class="headerlink" title="最优情况&amp;&amp;最优情况&amp;最差情况&amp;平均情况"></a>最优情况&amp;&amp;最优情况&amp;最差情况&amp;平均情况</h3><p>由于归并排序并不存在元素的交换，无论怎样的序列都一律分割完之后进行只有merge这一操作，所以最好最坏平均时间复杂度相等<br>按照递推推导出时间复杂度为O(nlogn)<br><img src="https://i.loli.net/2020/10/06/rlwMjJWACnT4VfX.png" alt="QQ图片20201006173129.png"></p>
+<h2 id="空间复杂度-4"><a href="#空间复杂度-4" class="headerlink" title="空间复杂度"></a>空间复杂度</h2><p>由于归并排序的merge操作需要用到与原序列同级的额外空间n，而递归调用了logn次函数，所以空间复杂度取较大那个，为O(n)</p>
+<br/>
+
+<h2 id="小总结-4"><a href="#小总结-4" class="headerlink" title="小总结"></a>小总结</h2><h2 id="归并排序-1"><a href="#归并排序-1" class="headerlink" title="归并排序"></a>归并排序</h2><table>
+<thead>
+<tr>
+<th align="center">稳定性</th>
+<th align="center">最优时间复杂度</th>
+<th align="center">平均时间复杂度</th>
+<th align="center">最差时间复杂度</th>
+<th align="center">空间复杂度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">稳定</td>
+<td align="center">O(nlogn)</td>
+<td align="center">O(nlogn)</td>
+<td align="center">O(nlogn)</td>
+<td align="center">O(n)</td>
+</tr>
+</tbody></table>
+<p><br/><br/><br/></p>
+<h1 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h1><p>快速排序的基本思想是通过一趟排序将待排记录分隔成独立的两部分，其中一部分记录的关键字均比另一部分的关键字小，则可分别对这两部分记录继续进行排序，以达到整个序列有序。</p>
+<blockquote>
+<p>快速排序的过程</p>
+<ol>
+<li>从数列中挑出一个轴点元素，称为 “基准”（pivot）；</li>
+<li>重新排序数列，所有元素比基准值小的摆放在基准前面，所有元素比基准值大的摆在基准的后面（相同的数可以到任一边）。在这个分区退出之后，该基准就处于数列的中间位置。这个称为分区（partition）操作；</li>
+<li>递归地（recursive）把小于基准值元素的子数列和大于基准值元素的子数列排序。</li>
+</ol>
+</blockquote>
+<p>快速排序的轴点构造<br>如图序列，假设选取6a为轴点，先备份6a，首先从后往前扫描，发现7&gt;6a<br><img src="https://i.loli.net/2020/10/06/BNi7POCyTmZfhkW.png" alt="QQ图片20201006175929.png"></p>
+<p>那么直接将7放置在begin处覆盖掉原数据，再从前往后扫描。如此往复交替直到begin与end重合，再将原来的轴点放入该处<br><img src="https://i.loli.net/2020/10/06/aVtcDdWGzEZmspe.png" alt="QQ图片20201006180404.png"></p>
+<h2 id="稳定性-5"><a href="#稳定性-5" class="headerlink" title="稳定性"></a>稳定性</h2><p>快速排序中，存在不相邻元素交换的情况，所以快速排序不稳定</p>
+<h2 id="时间复杂度-5"><a href="#时间复杂度-5" class="headerlink" title="时间复杂度"></a>时间复杂度</h2><h3 id="最优情况-3"><a href="#最优情况-3" class="headerlink" title="最优情况"></a>最优情况</h3><p>当轴点两边的元素数目相当均匀时，快速排序达到最优情况<br><img src="https://i.loli.net/2020/10/06/LA4yKghPSzRU8xm.png" alt="QQ图片20201006181028.png"></p>
+<h3 id="平均情况-3"><a href="#平均情况-3" class="headerlink" title="平均情况"></a>平均情况</h3><p>与最优情况同级，为O(nlogn)</p>
+<h3 id="最差情况-3"><a href="#最差情况-3" class="headerlink" title="最差情况"></a>最差情况</h3><p>当轴点两边元素极度不均匀时，为最差情况<br><img src="https://i.loli.net/2020/10/06/C4VUASM1ZJ2Pyav.png" alt="QQ图片20201006181243.png"><br>为了避免这种情况，一般采取随机选择轴点元素，所以快速排序取到最差情况的概率极低，其他的排序都是按最差情况作为时间复杂度，快速排序是按平均情况</p>
+<h2 id="空间复杂度-5"><a href="#空间复杂度-5" class="headerlink" title="空间复杂度"></a>空间复杂度</h2><p>由于递归调用了logn次函数，所以空间复杂度为O(logn)</p>
+<br/>
+
+<h2 id="小总结-5"><a href="#小总结-5" class="headerlink" title="小总结"></a>小总结</h2><h2 id="快速排序-1"><a href="#快速排序-1" class="headerlink" title="快速排序"></a>快速排序</h2><table>
+<thead>
+<tr>
+<th align="center">稳定性</th>
+<th align="center">最优时间复杂度</th>
+<th align="center">平均时间复杂度</th>
+<th align="center">最差时间复杂度</th>
+<th align="center">空间复杂度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">不稳定</td>
+<td align="center">O(nlogn)</td>
+<td align="center">O(nlogn)</td>
+<td align="center">O(n^2)</td>
+<td align="center">O(logn)</td>
+</tr>
+</tbody></table>
+<hr>
+<p>这上面为一些基本排序算法，待更新<br>附上常见递推式对应时间复杂度<br><img src="https://s1.ax1x.com/2020/10/06/0UP7RA.png" alt="0UP7RA.png"><br>另附常见排序算法分类、时空复杂度、稳定性表格（希尔排序可能有错）<br><img src="https://i.loli.net/2020/10/06/5H3ftKxTzpUqPVR.png" alt="QQ图片20201006182119.png"><br>表格2<br><img src="https://i.loli.net/2020/10/06/YBosiwJQknauK31.png" alt="QQ图片20201006182345.png"></p>
+
       
 
       
@@ -182,16 +450,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/10/06/%E5%90%84%E7%B1%BB%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/">MORE >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2020/10/06/%E5%90%84%E7%B1%BB%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2020/10/05/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">我的第一篇文章</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -206,151 +533,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-我的第一篇文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/05/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/">我的第一篇文章</a>
-    </h1>
-  
-
-        
-        <a href="/2020/10/05/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2020-10-05T09:59:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="我的第一篇文章"><a href="#我的第一篇文章" class="headerlink" title="我的第一篇文章"></a>我的第一篇文章</h1><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>使用标题时需要使用#号</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/10/05/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/">MORE >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%86%85%E9%83%A8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95"><span class="toc-number">1.</span> <span class="toc-text">内部排序算法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F"><span class="toc-number">2.</span> <span class="toc-text">插入排序</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A8%B3%E5%AE%9A%E6%80%A7"><span class="toc-number">2.1.</span> <span class="toc-text">稳定性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-number">2.2.</span> <span class="toc-text">时间复杂度</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E4%BC%98%E6%83%85%E5%86%B5"><span class="toc-number">2.2.1.</span> <span class="toc-text">最优情况</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E5%B7%AE%E6%83%85%E5%86%B5"><span class="toc-number">2.2.2.</span> <span class="toc-text">最差情况</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%B3%E5%9D%87%E6%83%85%E5%86%B5"><span class="toc-number">2.2.3.</span> <span class="toc-text">平均情况</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-number">2.3.</span> <span class="toc-text">空间复杂度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E6%80%BB%E7%BB%93"><span class="toc-number">2.4.</span> <span class="toc-text">小总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%B4%E6%8E%A5%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F"><span class="toc-number">2.5.</span> <span class="toc-text">直接插入排序</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F"><span class="toc-number">3.</span> <span class="toc-text">选择排序</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A8%B3%E5%AE%9A%E6%80%A7-1"><span class="toc-number">3.1.</span> <span class="toc-text">稳定性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6-1"><span class="toc-number">3.2.</span> <span class="toc-text">时间复杂度</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E4%BC%98%E6%83%85%E5%86%B5-amp-%E6%9C%80%E5%B7%AE%E6%83%85%E5%86%B5-amp-%E5%B9%B3%E5%9D%87%E6%83%85%E5%86%B5"><span class="toc-number">3.2.1.</span> <span class="toc-text">最优情况&amp;最差情况&amp;平均情况</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6-1"><span class="toc-number">3.3.</span> <span class="toc-text">空间复杂度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E6%80%BB%E7%BB%93-1"><span class="toc-number">3.4.</span> <span class="toc-text">小总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F-1"><span class="toc-number">3.5.</span> <span class="toc-text">选择排序</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F"><span class="toc-number">4.</span> <span class="toc-text">冒泡排序</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A8%B3%E5%AE%9A%E6%80%A7-2"><span class="toc-number">4.1.</span> <span class="toc-text">稳定性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6-2"><span class="toc-number">4.2.</span> <span class="toc-text">时间复杂度</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E4%BC%98%E6%83%85%E5%86%B5-1"><span class="toc-number">4.2.1.</span> <span class="toc-text">最优情况</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E5%B7%AE%E6%83%85%E5%86%B5-1"><span class="toc-number">4.2.2.</span> <span class="toc-text">最差情况</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%B3%E5%9D%87%E6%83%85%E5%86%B5-1"><span class="toc-number">4.2.3.</span> <span class="toc-text">平均情况</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6-2"><span class="toc-number">4.3.</span> <span class="toc-text">空间复杂度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E6%80%BB%E7%BB%93-2"><span class="toc-number">4.4.</span> <span class="toc-text">小总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F-1"><span class="toc-number">4.5.</span> <span class="toc-text">冒泡排序</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F"><span class="toc-number">5.</span> <span class="toc-text">希尔排序</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A8%B3%E5%AE%9A%E6%80%A7-3"><span class="toc-number">5.1.</span> <span class="toc-text">稳定性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6-3"><span class="toc-number">5.2.</span> <span class="toc-text">时间复杂度</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E4%BC%98%E6%83%85%E5%86%B5-2"><span class="toc-number">5.2.1.</span> <span class="toc-text">最优情况</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%B3%E5%9D%87%E6%83%85%E5%86%B5-2"><span class="toc-number">5.2.2.</span> <span class="toc-text">平均情况</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E5%B7%AE%E6%83%85%E5%86%B5-2"><span class="toc-number">5.2.3.</span> <span class="toc-text">最差情况</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6-3"><span class="toc-number">5.3.</span> <span class="toc-text">空间复杂度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E6%80%BB%E7%BB%93-3"><span class="toc-number">5.4.</span> <span class="toc-text">小总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F-1"><span class="toc-number">5.5.</span> <span class="toc-text">希尔排序</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F"><span class="toc-number">6.</span> <span class="toc-text">归并排序</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A8%B3%E5%AE%9A%E6%80%A7-4"><span class="toc-number">6.1.</span> <span class="toc-text">稳定性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6-4"><span class="toc-number">6.2.</span> <span class="toc-text">时间复杂度</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E4%BC%98%E6%83%85%E5%86%B5-amp-amp-%E6%9C%80%E4%BC%98%E6%83%85%E5%86%B5-amp-%E6%9C%80%E5%B7%AE%E6%83%85%E5%86%B5-amp-%E5%B9%B3%E5%9D%87%E6%83%85%E5%86%B5"><span class="toc-number">6.2.1.</span> <span class="toc-text">最优情况&amp;&amp;最优情况&amp;最差情况&amp;平均情况</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6-4"><span class="toc-number">6.3.</span> <span class="toc-text">空间复杂度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E6%80%BB%E7%BB%93-4"><span class="toc-number">6.4.</span> <span class="toc-text">小总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F-1"><span class="toc-number">6.5.</span> <span class="toc-text">归并排序</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F"><span class="toc-number">7.</span> <span class="toc-text">快速排序</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A8%B3%E5%AE%9A%E6%80%A7-5"><span class="toc-number">7.1.</span> <span class="toc-text">稳定性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6-5"><span class="toc-number">7.2.</span> <span class="toc-text">时间复杂度</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E4%BC%98%E6%83%85%E5%86%B5-3"><span class="toc-number">7.2.1.</span> <span class="toc-text">最优情况</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%B3%E5%9D%87%E6%83%85%E5%86%B5-3"><span class="toc-number">7.2.2.</span> <span class="toc-text">平均情况</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E5%B7%AE%E6%83%85%E5%86%B5-3"><span class="toc-number">7.2.3.</span> <span class="toc-text">最差情况</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6-5"><span class="toc-number">7.3.</span> <span class="toc-text">空间复杂度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E6%80%BB%E7%BB%93-5"><span class="toc-number">7.4.</span> <span class="toc-text">小总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F-1"><span class="toc-number">7.5.</span> <span class="toc-text">快速排序</span></a></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
   
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/05/hello-world/">Hello World</a>
-    </h1>
   
 
-        
-        <a href="/2020/10/05/hello-world/" class="archive-article-date">
-  	<time datetime="2020-10-05T08:32:27.524Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/10/05/hello-world/">MORE >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
+  
 
   
+
   
 
 
@@ -377,8 +585,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
